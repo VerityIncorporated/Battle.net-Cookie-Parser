@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-            Console.Title = "Redline CookieParser | Battle.net | Files Left: 0";
+            Console.Title = "Cookie Parser | Battle.net | Files Left: 0";
             if (!Directory.Exists("Parsed")) Directory.CreateDirectory("Parsed");
             var allFiles = Directory.GetFiles(Directory.GetCurrentDirectory() + @"\", "*.txt*", SearchOption.AllDirectories).Where(s => !s.ToLower().Contains("filegrabber") && !s.ToLower().Contains("autofills"));
             var fileCount = allFiles.Count();
@@ -21,7 +21,7 @@
                 }
 
                 fileCount--;
-                Console.Title = $"Redline CookieParser | Battle.net | Files Left: {fileCount}";
+                Console.Title = $"Cookie Parser | Battle.net | Files Left: {fileCount}";
             }
         }
     
